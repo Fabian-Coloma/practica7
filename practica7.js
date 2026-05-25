@@ -17,18 +17,18 @@
 //   return(celsius *9/5) + 32;
 // }
 
-// for (let i = 1; i <= 5; i + 1) {
+// for (let i = 1; i <= 5; i++) {
 
-// }let temperatura = prompt("Ingresa una temperatura en Celsius"); 
-// let numero = Number(entrada);
+// let temperatura = prompt("Ingresa una temperatura en Celsius"); 
+// let numero = Number(temperatura);
 // if (numero > 0 || numero <= 0) {
-//   let fahrenheit = ConvertirAFahrenheit;
+//   let fahrenheit = ConvertirAFahrenheit(numero);
 //   console.log(numero + "grados celsius son" + fahrenheit + "grados Fahrenheit ");
 
 // } else {
 //   console.log("error: lo que ingresaste no es valido");
 // }
-
+// }
 
 // function clasificarParesImpares(inicio, fin) {
 //   for (let i = inicio; i <= fin; i++) {
