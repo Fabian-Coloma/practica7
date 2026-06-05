@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MINIPROYECTOCOLOMA</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./scripts/darkmode.js" defer></script>
+  <script src="./scripts/arrys.js" defer></script>
+  <script src="./scripts/info.js" defer></script>
 
   <script>
     tailwind.config = {
@@ -36,23 +38,25 @@
       <span class="text-xs uppercase tracking-widest text-textMuted dark:text-slate-500 transition-colors">Desarrollador<br>Reactivo</span>
     </div>
 
+    
     <nav class="hidden md:flex space-x-10 text-textMuted dark:text-slate-500 text-xs font-bold tracking-widest items-center transition-colors">
      <button id="btndark" class="bg-gray-300 text-black border-2 border-black px-4 py-1 font-bold dark:bg-gray-700 dark:text-white dark:border-gray-400 cursor-pointer">
-  💡MODE
-</button>
-      <a href="#about" class="hover:text-white dark:hover:text-slate-900 transition-colors">ACERCA DE MI</a>
-      <a href="#skills" class="hover:text-white dark:hover:text-slate-900 transition-colors">HABILIDADES</a>
-      <a href="#projects" class="hover:text-white dark:hover:text-slate-900 transition-colors">PROYECTOS</a>
-      <a href="#CONTACTAME" class="flex items-center gap-2 border border-textMuted dark:border-slate-400 text-textMuted dark:text-slate-500 rounded-full pl-6 pr-2 py-1.5 text-xs font-bold hover:border-brandAccent dark:hover:border-brandAccent hover:text-brandAccent dark:hover:text-brandAccent transition-all cursor-pointer">
+      💡MODE
+     </button>
+      <a class="cursor-pointer hover:text-white dark:hover:text-slate-900 transition-colors">ACERCA DE MI</a>
+      <a class="cursor-pointer hover:text-white dark:hover:text-slate-900 transition-colors">HABILIDADES</a>
+      <a class="cursor-pointer hover:text-white dark:hover:text-slate-900 transition-colors">PROYECTOS</a>
+      <a class="cursor-pointer flex items-center gap-2 border border-textMuted dark:border-slate-400 text-textMuted dark:text-slate-500 rounded-full pl-6 pr-2 py-1.5 text-xs font-bold hover:border-brandAccent dark:hover:border-brandAccent hover:text-brandAccent dark:hover:text-brandAccent transition-all">
         CONTACTAME <span class="bg-brandAccent text-mainBg dark:text-slate-900 rounded-full p-1.5">↗</span>
       </a>
     </nav>
 
+    
     <nav id="menu-desplegable" class="hidden absolute top-full left-0 w-full bg-cardBg dark:bg-white flex-col items-center py-8 space-y-6 border-t border-gray-800 dark:border-gray-200 shadow-2xl z-50 transition-colors duration-300">
-      <a href="#about" class="text-white dark:text-slate-900 text-sm font-bold tracking-widest hover:text-brandAccent transition-colors">ACERCA DE MI</a>
-      <a href="#skills" class="text-white dark:text-slate-900 text-sm font-bold tracking-widest hover:text-brandAccent transition-colors">HABILIDADES</a>
-      <a href="#projects" class="text-white dark:text-slate-900 text-sm font-bold tracking-widest hover:text-brandAccent transition-colors">PROYECTOS</a>
-      <a href="#CONTACTAME" class="bg-brandAccent text-mainBg dark:text-slate-900 px-8 py-3 rounded-full text-sm font-bold mt-2 shadow-lg">CONTACTAME ↗</a>
+      <a class="cursor-pointer text-white dark:text-slate-900 text-sm font-bold tracking-widest hover:text-brandAccent transition-colors">ACERCA DE MI</a>
+      <a class="cursor-pointer text-white dark:text-slate-900 text-sm font-bold tracking-widest hover:text-brandAccent transition-colors">HABILIDADES</a>
+      <a class="cursor-pointer text-white dark:text-slate-900 text-sm font-bold tracking-widest hover:text-brandAccent transition-colors">PROYECTOS</a>
+      <a class="cursor-pointer bg-brandAccent text-mainBg dark:text-slate-900 px-8 py-3 rounded-full text-sm font-bold mt-2 shadow-lg">CONTACTAME ↗</a>
     </nav>
   </header>
 
@@ -60,7 +64,8 @@
     <div class="absolute inset-0 bg-glow-radial -z-10 dark:opacity-0 transition-opacity duration-300"></div>
 
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4 transition-colors">
-      I'm <span class="text-brandAccent font-bold">Fabian Coloma</span><br>
+     
+      I'm <span id="mi-nombre" class="text-brandAccent font-bold"></span><br>
       <span class="text-white dark:text-slate-900 font-bold border-brandAccent transition-colors">Front-End Developer</span>
     </h1>
 
@@ -82,12 +87,14 @@
       <div class="hidden lg:block absolute right-0 bottom-32 bg-cardBg dark:bg-white p-5 rounded-xl shadow-2xl text-left z-10 w-64 border border-gray-800/50 dark:border-gray-200 transition-colors duration-300">
         <p class="text-textMuted dark:text-slate-500 text-xs font-bold tracking-wider mb-4 transition-colors">MI ESPECIALIDAD</p>
         <div class="mb-3">
-          <p class="text-textMuted dark:text-slate-500 text-[10px] font-bold mb-1 flex justify-between transition-colors">BACKEND <span class="text-white dark:text-slate-900">90%</span></p>
+         
+          <p class="text-textMuted dark:text-slate-500 text-[10px] font-bold mb-1 flex justify-between transition-colors">BACKEND <span id="nivel-backend" class="text-white dark:text-slate-900"></span></p>
           <div class="w-full bg-mainBg dark:bg-gray-100 h-1 rounded-full"><div class="bg-textMuted dark:bg-slate-400 h-1 w-[90%] rounded-full relative"><div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-brandAccent rounded-full"></div></div></div>
         </div>
         
         <div>
-          <p class="text-textMuted dark:text-slate-500 text-[10px] font-bold mb-1 flex justify-between transition-colors">FRONTEND <span class="text-white dark:text-slate-900">100%</span></p>
+        
+          <p class="text-textMuted dark:text-slate-500 text-[10px] font-bold mb-1 flex justify-between transition-colors">FRONTEND <span id="nivel-frontend" class="text-white dark:text-slate-900"></span></p>
           <div class="w-full bg-mainBg dark:bg-gray-100 h-1 rounded-full"><div class="bg-textMuted dark:bg-slate-400 h-1 w-full rounded-full relative"><div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-brandAccent rounded-full"></div></div></div>
         </div>
       </div>
@@ -112,15 +119,16 @@
     </div>
 
     <div class="text-center max-w-2xl relative z-10">
-      <h2 class="text-4xl md:text-5xl font-bold text-brandAccent mb-10 tracking-widest">  QUIEN SOY ?</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-brandAccent mb-10 tracking-widest">  QUIEN SOY ?</h2>
       <div class="space-y-6 text-textMuted dark:text-slate-600 leading-relaxed text-sm transition-colors">
-        <p>Soy un desarrollador web full-stack especializado en ReactJS. Además, poseo conocimientos de desarrollo front-end en WordPress con Elementor y WooCommerce.</p>
-        <p>La programación es mi pasión, por esa razón trabajo simultáneamente a mi carrera académica.</p>
-        <p>Adicionalmente, en mi tiempo libre me gusta jugar videojuegos de PC y leer libros de narrativa (tipo historias), ¡lo cual me resulta divertido y relajante!</br></p>
+        
+        
+        <p id="mi-descripcion"></p>
 
-      <button class="mt-10 bg-brandAccent text-mainBg dark:text-slate-900 text-xs font-bold py-3 px-8 rounded-full hover:bg-white transition-colors shadow-lg">
-        VER MIS PROYECTOS
-      </button>
+        <button class="mt-10 bg-brandAccent text-mainBg dark:text-slate-900 text-xs font-bold py-3 px-8 rounded-full hover:bg-white transition-colors shadow-lg">
+          VER MIS PROYECTOS
+        </button>
+      </div>
     </div>
   </section>
 
@@ -130,20 +138,11 @@
     <section class="w-full flex flex-col gap-4">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-4">
         
-        <div class="lg:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="bg-[#111827] dark:bg-white aspect-square rounded-2xl flex items-center justify-center border border-white/5 dark:border-gray-200 dark:shadow-md transition-all duration-300">
-            <img src="./public/5.png" alt="HTML" class="w-20 h-20">
-          </div>
-          <div class="bg-[#111827] dark:bg-white aspect-square rounded-2xl flex items-center justify-center border border-white/5 dark:border-gray-200 dark:shadow-md transition-all duration-300"> <img src="./public/33.png" alt="HTML" class="w-20 h-20"> </div>
-          <div class="bg-[#111827] dark:bg-white aspect-square rounded-2xl flex items-center justify-center border border-white/5 dark:border-gray-200 dark:shadow-md transition-all duration-300"> <img src="./public/44.png" alt="HTML" class="w-20 h-20"> </div>
-          <div class="bg-[#111827] dark:bg-white aspect-square rounded-2xl flex items-center justify-center border border-white/5 dark:border-gray-200 dark:shadow-md transition-all duration-300"> <img src="./public/55.png" alt="HTML" class="w-20 h-20"> </div>
-          <div class="bg-[#111827] dark:bg-white aspect-square rounded-2xl flex items-center justify-center border border-white/5 dark:border-gray-200 dark:shadow-md transition-all duration-300"> <img src="./public/66.png" alt="HTML" class="w-20 h-20"> </div>
-          <div class="bg-[#111827] dark:bg-white aspect-square rounded-2xl flex items-center justify-center border border-white/5 dark:border-gray-200 dark:shadow-md transition-all duration-300"> <img src="./public/22.png" alt="HTML" class="w-20 h-20"> </div>
-          <div class="bg-[#111827] dark:bg-white aspect-square rounded-2xl flex items-center justify-center border border-white/5 dark:border-gray-200 dark:shadow-md transition-all duration-300"> <img src="./public/Sin título1.png" alt="HTML" class="w-20 h-20"> </div>
-          <div class="bg-[#111827] dark:bg-white aspect-square rounded-2xl flex items-center justify-center border border-white/5 dark:border-gray-200 dark:shadow-md transition-all duration-300"> <img src="./public/4.png" alt="HTML" class="w-2₀ h-₂₀"> </div>
+        
+        <div id="habilidades-principales" class="lg:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4">
         </div>
 
-        <div class="lg:col-span-1 bg-[#111827] dark:bg-white rounded-２xl p-5 flex flex-col items-center justify-center text-center border border-white/5 dark:border-gray-２００ dark:shadow-md transition-all duration-3００">
+        <div class="lg:col-span-1 bg-[#111827] dark:bg-white rounded-2xl p-5 flex flex-col items-center justify-center text-center border border-white/5 dark:border-gray-200 dark:shadow-md transition-all duration-300">
           <span class="text-6xl font-black text-white dark:text-slate-900 transition-colors">3</span>
           <p class="text-gray-400 dark:text-slate-500 text-sm font-bold leading-tight uppercase transition-colors">Meses<br>Experiencia<br>Trabajando</p>
         </div>
@@ -152,18 +151,14 @@
       <div class="bg-[#111827] dark:bg-white border border-white/5 dark:border-gray-200 dark:shadow-md rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 transition-all duration-300">
         <h3 class="text-orange-400 text-xl font-bold tracking-widest whitespace-nowrap">HABILIDADES ADICIONALES:</h3>
         
-        <div class="flex flex-auto justify-center items-between gap-11">
-          <img src="./public/22.png" alt="HTML" class="w-8 h-8">
-          <img src="./public/Sin título1.png" alt="HTML" class="w-8 h-8">
-          <img src="./public/3.png" alt="HTML" class="w-8 h-8">
-          <img src="./public/4.png" alt="HTML" class="w-8 h-8">
-          <img src="./public/5.png" alt="HTML" class="w-8 h-8">
-          <img src="./public/66.png" alt="HTML" class="w-8 h-8">
-          <img src="./public/55.png" alt="HTML" class="w-8 h-8">
+        
+        <div id="habilidades-adicionales" class="flex flex-auto justify-center items-center gap-11">
+        </div>
       </div>
     </section>
   </section>
 
+  
   <section id="projects" class="py-24 px-6 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
     <div class="lg:w-1/3 text-center lg:text-left">
       <h2 class="text-3xl md:text-5xl font-bold text-white dark:text-slate-900 mb-10 leading-tight transition-colors">TRABAJOS<br>MAS CERCANOS<br>A MI</h2>
@@ -184,13 +179,14 @@
     </div>
   </section>
 
+  
   <section id="contact" class="py-32 px-6">
     <div class="max-w-xl mx-auto bg-white dark:bg-white rounded-[30px] p-10 md:p-14 text-center text-mainBg dark:text-slate-900 shadow-2xl transition-colors duration-300">
       <h2 class="text-3xl font-bold mb-10 tracking-wide">CONTACTAME</h2>
-      <form class="flex flex-col gap-4">
-        <input type="text" placeholder="TU NOMBRE" class="w-full bg-formInput dark:bg-slate-50 dark:border dark:border-slate-300 text-mainBg dark:text-slate-900 placeholder-gray-400 rounded-xl p-4 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent transition-all">
-        <input type="email" placeholder="DIRECCIÓN DE EMAIL" class="w-full bg-formInput dark:bg-slate-50 dark:border dark:border-slate-300 text-mainBg dark:text-slate-900 placeholder-gray-400 rounded-xl p-4 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent transition-all">
-        <textarea placeholder="ESCRIBE TU MENSAJE" rows="5" class="w-full bg-formInput dark:bg-slate-50 dark:border dark:border-slate-300 text-mainBg dark:text-slate-900 placeholder-gray-400 rounded-xl p-4 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent resize-none transition-all"></textarea>
+      <form autocomplete="off" class="flex flex-col gap-4">
+        <input type="text" autocomplete="off" placeholder="TU NOMBRE" class="w-full bg-formInput dark:bg-slate-50 dark:border dark:border-slate-300 text-mainBg dark:text-slate-900 placeholder-gray-400 rounded-xl p-4 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent transition-all">
+        <input type="email" autocomplete="off" placeholder="DIRECCIÓN DE EMAIL" class="w-full bg-formInput dark:bg-slate-50 dark:border dark:border-slate-300 text-mainBg dark:text-slate-900 placeholder-gray-400 rounded-xl p-4 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent transition-all">
+        <textarea autocomplete="off" placeholder="ESCRIBE TU MENSAJE" rows="5" class="w-full bg-formInput dark:bg-slate-50 dark:border dark:border-slate-300 text-mainBg dark:text-slate-900 placeholder-gray-400 rounded-xl p-4 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent resize-none transition-all"></textarea>
         
         <button type="submit" class="mt-2 bg-brandAccent text-mainBg dark:text-slate-900 font-bold py-4 rounded-xl hover:brightness-105 transition-all text-xs tracking-widest">ENVIAR MENSAJE</button>
       </form>
@@ -198,3 +194,4 @@
   </section>
 
 </body>
+</html>
